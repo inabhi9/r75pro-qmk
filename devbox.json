@@ -1,22 +1,22 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.17.2/.schema/devbox.schema.json",
   "env": {
-    "PIP_ROOT_USER_ACTION": "ignore"
+    
   },
   "packages": [
     "qmk@1.2.0",
     "dos2unix@latest",
-    "python313Packages.pip-tools@latest"
+    "python313Packages.appdirs@latest"
   ],
   "shell": {
     "init_hook": [
-      "echo Welcome to devbox! > /dev/null"
+      
     ],
     "scripts": {
       "setup": [
-        "rm -fr ./qmk_firmware",
-        "qmk setup -y -H ./qmk_firmware hangshengkeji/qmk_firmware",
-        "python -m pip install -r ./qmk_firmware/requirements.txt"
+        "rm -fr $(pwd)/qmk_firmware",
+        "qmk setup -y -H $(pwd)/qmk_firmware hangshengkeji/qmk_firmware",
+        "devbox run ln-keyboard"
       ],
       "ln-keyboard": [
         "rm -fr $(pwd)/qmk_firmware/keyboards/rk/r75_pro",
