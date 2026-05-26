@@ -21,7 +21,8 @@
       "ln-keyboard": [
         "rm -fr $(pwd)/qmk_firmware/keyboards/rk/r75_pro",
         "ln -s $(pwd)/src/keyboards/rk/r75_pro $(pwd)/qmk_firmware/keyboards/rk/r75_pro"
-      ]
+      ],
+      "qmk-compile": "qmk compile -kb rk/r75_pro -km default"
     }
   }
 }
