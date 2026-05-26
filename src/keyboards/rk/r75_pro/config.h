@@ -3,6 +3,8 @@
 
 #pragma once
 
+#define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+
 #define USB_POWER_EN_PIN                    B1 // USB ENABLE pin
 #define LED_POWER_EN_PIN                    A5 // LED ENABLE pin
 #define HS_BAT_CABLE_PIN                    A7 // USB insertion detection pin
