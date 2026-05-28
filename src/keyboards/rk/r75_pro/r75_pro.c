@@ -1296,6 +1296,10 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
         }
 #endif
     
+    if (is_caps_word_on()) {
+        rgb_matrix_set_color(76, 0xFF, 0xFF, 0xFF);
+    }
+
     rgb_matrix_blink_task(led_min, led_max);
     
     query();
@@ -1397,7 +1401,7 @@ void hs_rgb_blink_hook_user(void) {
                 linker_ok                = false;
                 connect_ok_time = timer_read32();
             } break;
-            case MD_STATE_PAIRING: { // 8003 ±ØÐë·µ»Ø´¦ÀíÖµ£¬²»È»Ã»ÓÐÅä¶ÔÐÅÏ¢
+            case MD_STATE_PAIRING: { // 8003 ï¿½ï¿½ï¿½ë·µï¿½Ø´ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½È»Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
                 linker_ok                = false;
                 connect_ok_time = timer_read32();
             } break;
