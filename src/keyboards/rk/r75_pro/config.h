@@ -4,6 +4,7 @@
 #pragma once
 
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+#define PERMISSIVE_HOLD
 
 #define USB_POWER_EN_PIN                    B1 // USB ENABLE pin
 #define LED_POWER_EN_PIN                    A5 // LED ENABLE pin
@@ -28,6 +29,7 @@
 #define HS_RGB_BLINK_INDEX_BT3              47
 #define HS_RGB_BLINK_INDEX_2G4              40
 #define HS_RGB_BLINK_INDEX_USB              45
+#define HS_RGB_BLINK_INDEX_SPACEBAR         55
 
 #define WIITE_B                             0X10
 
