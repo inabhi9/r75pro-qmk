@@ -29,7 +29,6 @@
 #define HS_RGB_BLINK_INDEX_BT3              47
 #define HS_RGB_BLINK_INDEX_2G4              40
 #define HS_RGB_BLINK_INDEX_USB              45
-#define HS_RGB_BLINK_INDEX_SPACEBAR         55
 
 #define WIITE_B                             0X10
 
@@ -78,6 +77,8 @@
 // #define HS_RGB_BLINK_INDEX_SYS_TEM          90
 // #define HS_RGB_BLINK_INDEX_FREQ             114
 // #define HS_RGB_BLINK_INDEX_MUSIC            35 // 
+#define HS_RGB_INDEX_SPACEBAR                  80
+#define HS_RGB_INDEX_LSHIFT                    76
 
 /*LED*/
 #define LED_PIN_ON_STATE 0

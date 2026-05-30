@@ -1297,7 +1297,12 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
 #endif
     
     if (is_caps_word_on()) {
-        rgb_matrix_set_color(76, 0xFF, 0xFF, 0xFF);
+        rgb_matrix_set_color(HS_RGB_INDEX_LSHIFT, RGB_WHITE);
+    }
+
+    // Turn on spacebar LED when _FL layer is active
+    if (get_highest_layer(layer_state) == _FL) {
+        rgb_matrix_set_color(HS_RGB_INDEX_SPACEBAR, RGB_WHITE);  // White
     }
 
     rgb_matrix_blink_task(led_min, led_max);
